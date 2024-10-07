@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --primary-color: #f54748;
-  --primary-color-dark: #d83e3e;
+  --primary-color: #00983A;
+  --primary-color-dark: #3ed858;
   --text-dark: #2e2e2e;
   --text-light: #595959;
   --extra-light: #f3f4f6;
@@ -20,6 +20,7 @@
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
+  color: #ffffff;
 }
 
 .section__header {
@@ -91,7 +92,7 @@ body {
 header {
   background: linear-gradient(
     to bottom,
-    rgba(245, 71, 72, 0.1),
+    rgba(71, 245, 155, 0.1),
     rgba(245, 71, 72, 0)
   );
 }
@@ -109,7 +110,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--primary-color);
+  background-color: #026b2a;
 }
 
 .nav__logo img {
@@ -185,7 +186,7 @@ nav {
   align-items: center;
   gap: 1rem;
   color: var(--primary-color);
-  background-color: rgba(245, 71, 72, 0.1);
+  background-color: rgba(59, 247, 109, 0.1);
   border-radius: 5rem;
 }
 
@@ -227,7 +228,7 @@ nav {
 .header__btns a span {
   padding: 4px 10px;
   font-size: 1.5rem;
-  color: #fdc55e;
+  color: #087608;
   border-radius: 100%;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
@@ -311,7 +312,7 @@ nav {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--white);
+  color: #3ed858;
 }
 
 .menu__card__details h5 {
@@ -396,7 +397,7 @@ nav {
 }
 
 .download__container {
-  background-color: rgba(245, 71, 72, 0.05);
+  background-color: rgba(51, 201, 79, 0.05);
   overflow: hidden;
 }
 
