@@ -611,3 +611,7 @@ nav {
   }
 }
 
+.coeficientes__detalhes .detalhes__text {
+  color: #333; /* Define uma cor escura, como preto ou cinza */
+}
+
