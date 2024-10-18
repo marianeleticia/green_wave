@@ -352,7 +352,7 @@ nav {
 
 .client__content .section__description {
   margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
 }
 
 .client__details {
@@ -475,7 +475,9 @@ nav {
   display: grid;
   gap: 1rem;
 }
-
+.footer__links {
+  color: var(--text-light);
+}
 .footer__links a {
   color: var(--text-light);
 }
