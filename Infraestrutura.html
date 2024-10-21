@@ -1,133 +1,315 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <style>
-        body {
-          color: black;
-        }
-      </style>
-      
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+
     <title>Infraestrutura Hidrelétrica | Green Wave</title>
     <style>
-      /* Adicionando justificação de texto para as descrições */
-      .section__description, .service__card p {
-        text-align: justify;
-      }
+        /* Estilo para a seção e outros componentes */
+        .section__description, .service__card p {
+            text-align: justify;
+        }
+
+        /* Estilo para imagem menor e com bordas arredondadas */
+        .header__image img {
+            width: 80%;
+            border-radius: 15px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px 0;
+        }
+
+        /* Ajuste de estilo para os títulos com ícones */
+        .benefits__container h2, .faq__container h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .benefits__container h2 i, .faq__container h2 i {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        .benefit h4 i, .faq__item h4 i {
+            margin-right: 8px;
+            font-size: 1.2em;
+            color: #37bc1c;
+        }
+
+        /* Seção de Benefícios */
+        .benefits__container {
+            margin: 50px auto; 
+            padding: 20px;
+            background-color: #00983A;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+        }
+
+        .benefits__container h2 {
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Estilo normal e hover dos benefícios */
+        .benefit {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #fff;
+            color: #7b8c7ab3;
+            transition: background-color 0.3s, color 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .benefit:hover {
+            background-color: #abdfa8;
+            color: #ffffff;
+        }
+
+        /* Seção de Perguntas Frequentes (FAQ) */
+        .faq__container {
+            margin: 50px 0;
+            background-color: #61c761;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .faq__container h2 {
+            color: #fff;
+            text-align: center;
+        }
+
+        .faq__item {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        .faq__item:hover {
+            background-color: #e9e9e9;
+        }
+
+        /* Animação de rolagem suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animações suaves */
+        .header__btns button, a {
+            transition: all 0.3s ease;
+        }
+
+        /* Estilo para o modal (lightbox) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Botão para fechar o modal */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+      
+
     </style>
-  </head>
-  <body>
-    <header>
-      <nav>
+</head>
+<body>
+<header>
+    <nav>
         <div class="nav__header">
-          <div class="nav__logo">
-            <a href="#" class="logo">
-              <img src="assets/LOGO-SEM-NOME.png" alt="logo" />
-              <span>GREEN WAVE</span>
-            </a>
-          </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
-          </div>
+            <div class="nav__logo">
+                <a href="#" class="logo">
+                    <img src="assets/LOGO-SEM-NOME.png" alt="logo" />
+                    <span>GREEN WAVE</span>
+                </a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
         </div>
         <ul class="nav__links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="infraestrutura.html">Infraestrutura</a></li>
-          <li><a href="coeficientes.html">Coeficientes</a></li>
-          <li><a href="impactosAmbientais.html">Impactos</a></li>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#infrastructure">Infraestrutura</a></li>
+            <li><a href="#benefits">Benefícios</a></li>
+        
         </ul>
-      </nav> <!-- Aqui está o fechamento da tag nav -->
-      </div>
-   
-      <div class="section__container header__container" id="home">
+    </nav>
+    <div class="section__container header__container" id="home">
         <div class="header__image">
-          <img src="assets/infra.png" alt="Infraestrutura Hidrelétrica" />
+            <img src="assets/foto.png" alt="Infraestrutura Hidrelétrica" />
         </div>
         <div class="header__content">
-          <div class="header__tag">
-            Energia Sustentável
-            <img src="assets/hidreletrica.png" alt="Energia Sustentável" />
-          </div>
-          <h1>Infraestrutura <span>Hidrelétrica</span></h1>
-          <p class="section__description">
-            A infraestrutura de uma usina hidrelétrica inclui componentes essenciais como barragens, turbinas, represas e geradores, que juntos permitem a conversão da energia potencial da água em energia elétrica.
-          </p>
-          <div class="header__btns">
-            <button class="btn">Saiba Mais</button>
-            <a href="#">
-              <span><i class="ri-play-fill"></i></span>
-              Assista ao Vídeo
-            </a>
-          </div>
+            <div class="header__tag">
+                Energia Sustentável
+                <img src="assets/hidreletrica.png" alt="Energia Sustentável" />
+            </div>
+            <h1>Infraestrutura <span>Hidrelétrica</span></h1>
+            <p class="section__description">
+                A infraestrutura de uma usina hidrelétrica inclui componentes essenciais como barragens, turbinas, represas e geradores, que juntos permitem a conversão da energia potencial da água em energia elétrica.
+            </p>
+            <div class="header__btns">
+                <!-- Botão para baixar conteúdo -->
+                <a href="assets/foto1.png" download="foto1">
+                    <button class="btn">Saiba Mais</button>
+                </a>
+            
+                <a href="#video-modal">
+                    <a href="https://www.youtube.com/watch?v=FsMMbA09axY" target="_blank">
+                        <span><i class="ri-play-fill"></i></span>
+                        Assista ao Vídeo
+                    </a>
+                </div>
+                    <span><i class="ri-play-fill"></i></span>
+                    Assista ao Vídeo
+                </a>
+            </div>
         </div>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <section class="section__container service__container" id="infrastructure">
-      <p class="section__subheader">INFRAESTRUTURA</p>
-      <h2 class="section__header">Elementos principais da infraestrutura hidrelétrica</h2>
-      <div class="service__grid">
+<section class="section__container service__container" id="infrastructure">
+    <p class="section__subheader">INFRAESTRUTURA</p>
+    <h2 class="section__header">Elementos principais da infraestrutura hidrelétrica</h2>
+    <div class="service__grid">
         <div class="service__card">
-          <img src="assets/barragens.png" alt="Barragens" />
-          <h4>Barragens</h4>
-          <p>
-            Estruturas imponentes construídas para controlar o fluxo de água. Elas criam um reservatório e aumentam a altura da queda d'água, que gera energia quando liberada para as turbinas.
-          </p>
+            <img src="assets/barragens.png" alt="Barragens" />
+            <h4>Barragens</h4>
+            <p>
+                Estruturas imponentes construídas para controlar o fluxo de água. Elas criam um reservatório e aumentam a altura da queda d'água, que gera energia quando liberada para as turbinas.
+            </p>
         </div>
         <div class="service__card">
-          <img src="assets/turbinas.png" alt="Turbinas" />
-          <h4>Turbinas</h4>
-          <p>
-            Responsáveis pela conversão da energia da água em energia mecânica, girando para acionar os geradores que transformam essa energia em eletricidade.
-          </p>
+            <img src="assets/turbinas.png" alt="Turbinas" />
+            <h4>Turbinas</h4>
+            <p>
+                Responsáveis pela conversão da energia da água em energia mecânica, girando para acionar os geradores que transformam essa energia em eletricidade.
+            </p>
         </div>
         <div class="service__card">
-          <img src="assets/represa.png" alt="Represas" />
-          <h4>Represas</h4>
-          <p>
-            Estruturas auxiliares que ajudam a armazenar a água em grandes quantidades, regulando o fluxo para a geração de energia de acordo com a demanda.
-          </p>
+            <img src="assets/represa.png" alt="Represas" />
+            <h4>Represas</h4>
+            <p>
+                Estruturas auxiliares que ajudam a armazenar a água em grandes quantidades, regulando o fluxo para a geração de energia de acordo com a demanda.
+            </p>
         </div>
-    
-    </section>
-    <!-- Fim da Seção de Infraestrutura -->
+    </div>
+</section>
 
-    <!-- Rodapé -->
-    <footer>
-      <div class="section__container footer__container">
+<!-- Seção de Benefícios -->
+<section class="section__container benefits__container" id="benefits">
+    <h2 class="section__header">
+        <i class="ri-leaf-line"></i> Benefícios da Energia Hidrelétrica
+    </h2>
+    <div class="benefit">
+        <h4><i class="ri-sun-line"></i> Fonte de Energia Renovável</h4>
+        <p>A energia hidrelétrica é uma fonte limpa e renovável que não emite poluentes durante sua operação, contribuindo para a redução do aquecimento global.</p>
+    </div>
+    <div class="benefit">
+        <h4><i class="ri-store-line"></i> Capacidade de Armazenamento</h4>
+        <p>As usinas hidrelétricas podem armazenar energia, permitindo a geração de eletricidade durante períodos de alta demanda, mesmo que o fluxo de água seja reduzido.</p>
+    </div>
+    <div class="benefit">
+        <h4><i class="ri-community-line"></i> Geração de Empregos</h4>
+        <p>Construção e operação de usinas hidrelétricas criam empregos locais, desde engenharia até manutenção, beneficiando as comunidades ao redor.</p>
+    </div>
+    <div class="benefit">
+        <h4><i class="ri-map-pin-line"></i> Desenvolvimento Regional</h4>
+        <p>Usinas hidrelétricas estimulam o desenvolvimento de infraestruturas em áreas remotas, como estradas e serviços básicos, melhorando a qualidade de vida local.</p>
+    </div>
+</section>
+
+
+
+
+<!-- Modal de Vídeo -->
+<div id="video-modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <iframe id="video-frame" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!-- Rodapé -->
+<footer>
+    <div class="section__container footer__container">
         <div class="footer__col">
-          <div class="footer__logo">
-            <a href="#" class="logo">
-              <img src="assets/LOGO-SEM-NOME.png" alt="logo" />
-              <span>GREEN WAVE</span>
-            </a>
-          </div>
-          <p class="section__description">
-            Desenvolvido por alunos do SESI CAÇAPAVA e SENAI TAUBATÉ, focado em energia sustentável e infraestrutura hidrelétrica.
-          </p>
+            <div class="footer__logo">
+                <a href="#" class="logo">
+                    <img src="assets/LOGO-SEM-NOME.png" alt="logo" />
+                    <span>GREEN WAVE</span>
+                </a>
+            </div>
+            <p class="section__description">
+                Desenvolvido por alunos do SESI CAÇAPAVA e SENAI TAUBATÉ, focado em energia sustentável e infraestrutura hidrelétrica.
+            </p>
         </div>
         <div class="footer__col">
-          <h4>Contato</h4>
-          <ul class="footer__links">
-            <li><a href="#">SESI CAÇAPAVA</a></li>
-            <li><a href="#">SENAI TAUBATÉ</a></li>
-          </ul>
+            <h4>Contato</h4>
+            <ul class="footer__links">
+                <li><a href="mailto:contato@greenwave.com">Email</a></li>
+                <li><a href="tel:+551234567890">Telefone</a></li>
+            </ul>
         </div>
-      </div>
-    </footer>
-    <!-- Fim do Rodapé -->
+        <div class="footer__col">
+            <h4>Redes Sociais</h4>
+            <ul class="footer__links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
 </html>
