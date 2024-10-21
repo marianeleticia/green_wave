@@ -672,6 +672,42 @@ nav {
   color: #333; /* Define uma cor escura, como preto ou cinza */
 }
 
+.backdrop {
+  display: flex;
+  position: fixed;
+
+  opacity: 0;
+  transition: opacity .5s linear;
+
+  height: auto;
+
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  bottom: 5%;
+  right: 5%;
+  left: 5%;
+}
+
+#backdrop-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  position: fixed;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: -5px 5px 5px #ccc;
+}
+
+#backdrop-btn i {
+  color: #00983A;
+}
+
 .calculation__container {
   background-color: #f9f9f9;
   padding: 50px 20px;
@@ -745,7 +781,7 @@ nav {
   }
 
   .header__image img {
-    max-width: 100%; /
+    max-width: 100%; 
     height: auto;
   }
 

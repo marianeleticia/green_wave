@@ -96,3 +96,9 @@ ScrollReveal().reveal(".download__btn", {
   ...scrollRevealOption,
   delay: 2000,
 });
+
+window.addEventListener("scroll", () => {
+  let backdrop = document.querySelector(".backdrop");
+
+  backdrop.style.opacity = (window.scrollY > 200) ? 1 : 0;
+})

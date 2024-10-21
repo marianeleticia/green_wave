@@ -615,6 +615,41 @@ nav {
   }
 }
 
+.backdrop {
+  display: flex;
+  position: fixed;
+
+  opacity: 0;
+  transition: opacity .5s linear;
+
+  height: auto;
+
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  bottom: 5%;
+  right: 5%;
+  left: 5%;
+}
+
+#backdrop-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  position: fixed;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: -5px 5px 5px #ccc;
+}
+
+#backdrop-btn i {
+  color: #00983A;
+}
 /* Responsividade geral */
 @media screen and (max-width: 768px) {
   .header__container {
