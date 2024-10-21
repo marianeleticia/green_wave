@@ -312,7 +312,8 @@ nav {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #3ed858;
+  color: #26b73e;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .menu__card__details h5 {
