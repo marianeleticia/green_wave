@@ -82,81 +82,7 @@
             color: #ffffff;
         }
 
-        /* Seção de Perguntas Frequentes (FAQ) */
-        .faq__container {
-            margin: 50px 0;
-            background-color: #61c761;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .faq__container h2 {
-            color: #fff;
-            text-align: center;
-        }
-
-        .faq__item {
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            background-color: #f9f9f9;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            text-align: center;
-        }
-
-        .faq__item:hover {
-            background-color: #e9e9e9;
-        }
-
-        /* Animação de rolagem suave */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Animações suaves */
-        .header__btns button, a {
-            transition: all 0.3s ease;
-        }
-
-        /* Estilo para o modal (lightbox) */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-        }
-
-        .modal-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* Botão para fechar o modal */
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-      
+       
 
     </style>
 </head>
@@ -175,9 +101,10 @@
             </div>
         </div>
         <ul class="nav__links" id="nav-links">
-            <li><a href="#home">Início</a></li>
+            <li><a href="./index.html">Início</a></li>
             <li><a href="#infrastructure">Infraestrutura</a></li>
             <li><a href="#benefits">Benefícios</a></li>
+            <li><a href="#benefits"></a></li>
         
         </ul>
     </nav>
@@ -241,6 +168,28 @@
         </div>
     
     </section>
+    <!-- Seção de Benefícios -->
+<section class="section__container benefits__container" id="benefits">
+    <h2 class="section__header">
+       Benefícios
+    </h2>
+    <div class="benefit">
+        <h4><i class="ri-sun-line"></i> Fonte de Energia Renovável</h4>
+        <p>A energia hidrelétrica é uma fonte limpa e renovável que não emite poluentes durante sua operação, contribuindo para a redução do aquecimento global.</p>
+    </div>
+    <div class="benefit">
+        <h4><i class="ri-store-line"></i> Capacidade de Armazenamento</h4>
+        <p>As usinas hidrelétricas podem armazenar energia, permitindo a geração de eletricidade durante períodos de alta demanda, mesmo que o fluxo de água seja reduzido.</p>
+    </div>
+    <div class="benefit">
+        <h4><i class="ri-community-line"></i> Geração de Empregos</h4>
+        <p>Construção e operação de usinas hidrelétricas criam empregos locais, desde engenharia até manutenção, beneficiando as comunidades ao redor.</p>
+    </div>
+    <div class="benefit">
+        <h4><i class="ri-map-pin-line"></i> Desenvolvimento Regional</h4>
+        <p>Usinas hidrelétricas estimulam o desenvolvimento de infraestruturas em áreas remotas, como estradas e serviços básicos, melhorando a qualidade de vida local.</p>
+    </div>
+</section>
     <!-- Fim da Seção de Infraestrutura -->
 
     <!-- Rodapé -->
@@ -254,16 +203,48 @@
             </a>
           </div>
           <p class="section__description">
-            Desenvolvido por alunos do SESI CAÇAPAVA e SENAI TAUBATÉ, focado em energia sustentável e infraestrutura hidrelétrica.
+            Site desenvolvido por alunos do SESI CAÇAPAVA e SENAI TAUBATÉ como parte do projeto de energia sustentável.
           </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="https://www.instagram.com/senai.sp/" target="_blank"><i class="ri-instagram-fill"></i></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/senaisaopaulo/?locale=pt_BR" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+
+          </ul>
         </div>
         <div class="footer__col">
           <h4>Contato</h4>
           <ul class="footer__links">
-            <li><a href="#">SESI CAÇAPAVA</a></li>
-            <li><a href="#">SENAI TAUBATÉ</a></li>
+            <li><a href="https://www.facebook.com/groups/escolasesicaapava/" target="_blank">SESI CAÇAPAVA</a></li>
+            <li>(12) 3653-1943</li> <!-- Adicione o número do SESI CAÇAPAVA -->
+            <li><a href="https://www.instagram.com/senaitaubate/" target="_blank">SENAI TAUBATÉ</a></li>
+            <li>(12) 3609-5701</li> <!-- Adicione o número do SENAI TAUBATÉ -->
           </ul>
         </div>
+        
+        <div class="footer__col">
+          <h4>Políticas</h4>
+          <ul class="footer__links">
+            <li><a href="assets/Termos de Uso.pdf" download>Termos de Uso</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Desenvolvedores</h4>
+          <ul class="footer__links">
+            <p>Gabriel Borges</p>
+            <p>Lana Araújo</p>
+            <p>Mariane Moreira</p>
+            <p>Vitor Antônio</p>
+            <p>Yasmin Lobo</p>
+
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <p>© 2024 Green Wave. Todos os direitos reservados.</p>
       </div>
     </footer>
     <!-- Fim do Rodapé -->
@@ -275,5 +256,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
