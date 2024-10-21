@@ -29,11 +29,13 @@
           </div>
         </div>
         <ul class="nav__links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="infraestrutura.html">Infraestrutura</a></li>
-          <li><a href="coeficientes.html">Coeficientes</a></li>
-          <li><a href="impactosAmbientais.html">Impactos</a></li>
-        </ul>
+          <li><a href="index.html">Início</a></li> 
+          <li><a href="#coeficientes">Coeficientes</a></li> 
+          <li><a href="#client">Impactos</a></li> 
+          <li><a href="#calculation">Cálculo</a></li> 
+          <li><a href="#contact">Download</a></li> 
+                </ul>
+        
       </nav>
       <div class="section__container header__container" id="home">
         <div class="header__image">
@@ -59,7 +61,7 @@
         <div class="service__card">
           <img src="assets/gerador.png" alt="Energia Gerada" />
           <h4>Energia Gerada</h4>
-          <p>O volume de energia gerada por uma hidrelétrica depende da altura da queda d'água e do fluxo de água. Em média, uma usina gera 1 MW por cada metro de queda e 100 m³/s de vazão.</p>
+          <p>O volume de energia gerada por uma hidrelétrica depende da altura da queda d'água e do fluxo de água. Em média, uma usina gera 1 MW por cada metro de queda.</p>
         </div>
         <div class="service__card">
           <img src="assets/turbina.png" alt="Eficiência" />
@@ -74,20 +76,114 @@
       </div>
     </section>
 
-    <section class="download__container" id="contact">
-      <div class="section__container">
-        <div class="download__content">
-          <p class="section__subheader">DOWNLOAD</p>
-          <h2 class="section__header">Materiais sobre Energia Hidrelétrica</h2>
-          <p class="section__description">
-            Baixe nossos materiais informativos e saiba mais sobre a importância da energia hidrelétrica.
-          </p>
-          <div class="download__btn">
-            <button class="btn">Baixar Agora</button>
+    <section class="section__container coeficientes__container" id="coeficientes">
+      <p class="section__subheader">COEFICIENTES ENERGÉTICOS</p>
+      <h2 class="section__header">Dados Adicionais de Eficiência</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="menu__card">
+              <img src="assets/perdaenergia.jpeg" alt="Perda de Energia" />
+              <div class="menu__card__details">
+                <h4>Perda de Energia</h4>
+                <p>Cerca de 10% da energia gerada em uma usina hidrelétrica é perdida durante a transmissão e distribuição.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="menu__card">
+              <img src="assets/tempodevida.jfif" alt="Tempo de Vida Útil" />
+              <div class="menu__card__details">
+                <h4>Tempo de Vida Útil</h4>
+                <p>As usinas hidrelétricas podem operar por mais de 50 anos com manutenção adequada, garantindo alta produtividade.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="menu__card">
+              <img src="assets/reservatorio.jfif" alt="Volume do Reservatório" />
+              <div class="menu__card__details">
+                <h4>Volume do Reservatório</h4>
+                <p>O tamanho dos reservatórios pode variar, influenciando diretamente a capacidade de armazenamento de energia.</p>
+              </div>
+            </div>
+      </section>
+    
+     <section class="section__container client__container" id="client">
+      <div class="client__image">
+        <img src="assets/grafico.png" alt="client" />
+      </div>
+      <div class="client__content">
+        <p class="section__subheader">DADOS DE COEFICIENTE ENERGÉTICO</p>
+        <h2 class="section__header">Geração de Energia por Fonte</h2>
+        <p class="section__description">
+          O coeficiente energético indica a quantidade de energia gerada por unidade de recurso disponível. As diferentes fontes de energia têm coeficientes variados, refletindo sua eficiência.
+        </p>
+        <div class="client__details">
+          <img src="assets/hidreletrica.png" alt="Especialista" />
+          <div>
+            <h4>Coeficiente Hidrelétrico</h4>
+            <h5>1.5 MW/m³/s</h5>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section__container calculation__container" id="calculation">
+      <p class="section__subheader">CÁLCULO DO COEFICIENTE ENERGÉTICO</p>
+      <h2 class="section__header">Como é Calculado o Coeficiente Energético?</h2>
+      <div class="calculation__grid">
+        <div class="calculation__card">
+          <i class="ri-calculator-line calculation__icon"></i>
+          <h4>Fórmula Básica</h4>
+          <p>O coeficiente energético é calculado pela fórmula:</p>
+          <p class="formula"><strong>CE = P / (ρ × g × Q × H)</strong></p>
+          <p>
+            Onde:
+            <ul>
+              <li><strong>P</strong>: Potência gerada (em watts)</li>
+              <li><strong>ρ</strong>: Densidade da água (aprox. 1000 kg/m³)</li>
+              <li><strong>g</strong>: Aceleração gravitacional (9,81 m/s²)</li>
+              <li><strong>Q</strong>: Vazão de água (em m³/s)</li>
+              <li><strong>H</strong>: Altura da queda d'água (em metros)</li>
+            </ul>
+          </p>
+        </div>
+        <div class="calculation__card">
+          <i class="ri-equalizer-line calculation__icon"></i>
+          <h4>Fatores de Influência</h4>
+          <p>
+            A eficiência do coeficiente depende da altura da queda, vazão do rio e eficiência das turbinas. Maior altura e vazão resultam em maior energia gerada.
+          </p>
+        </div>
+        <div class="calculation__card">
+          <i class="ri-settings-2-line calculation__icon"></i>
+          <h4>Ajustes e Melhorias</h4>
+          <p>
+            Melhorias tecnológicas nas turbinas e práticas de manutenção podem aumentar a eficiência, melhorando o coeficiente energético da usina.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    
+        
+    
+    <section class="download__container" id="contact">
+      <div class="section__container">
+        <div class="download__content">
+          <p class="section__subheader">DOWNLOAD</p>
+          <h2 class="section__header">Materiais sobre Coeficiente Energético</h2>
+          <p class="section__description">
+            Baixe nossos materiais informativos e saiba mais sobre a importância da energia hidrelétrica.
+          </p>
+          <div class="download__btn">
+            <a href="assets/coeficiente.pdf" download class="btn">Baixar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
     <footer>
       <div class="section__container footer__container">
@@ -101,22 +197,38 @@
           <p class="section__description">
             Site desenvolvido por alunos do SESI CAÇAPAVA e SENAI TAUBATÉ como parte do projeto de energia sustentável.
           </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="https://www.instagram.com/senai.sp/"><i class="ri-instagram-fill"></i></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/senaisaopaulo/?locale=pt_BR"><i class="ri-facebook-fill"></i></a></li>
+
+          </ul>
         </div>
         <div class="footer__col">
           <h4>Contato</h4>
           <ul class="footer__links">
-            <li><a href="#">SESI CAÇAPAVA</a></li>
-            <li><a href="#">SENAI TAUBATÉ</a></li>
-            <li><a href="#">Ajuda</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="https://www.facebook.com/groups/escolasesicaapava/">SESI CAÇAPAVA</a></li>
+            <li><a href="https://www.instagram.com/senaitaubate/">SENAI TAUBATÉ</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h4>Políticas</h4>
           <ul class="footer__links">
-            <li><a href="#">Termos de Uso</a></li>
-            <li><a href="#">Política de Privacidade</a></li>
-            <li><a href="#">Cookies</a></li>
+            <li><a href="assets/Termos de Uso.pdf" download>Termos de Uso</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Desenvolvedores</h4>
+          <ul class="footer__links">
+            <p>Gabriel Borges</p>
+            <p>Lana Araújo</p>
+            <p>Mariane Moreira</p>
+            <p>Vitor Antônio</p>
+            <p>Yasmin Lobo</p>
+
           </ul>
         </div>
       </div>
