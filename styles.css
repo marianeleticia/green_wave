@@ -617,3 +617,63 @@ nav {
   color: #333; /* Define uma cor escura, como preto ou cinza */
 }
 
+
+
+.calculation__container {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  color: black;
+  text-align: center;
+}
+
+.calculation__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.calculation__card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
+}
+
+.calculation__icon {
+  font-size: 40px;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+}
+
+.calculation__card h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.calculation__card p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.calculation__card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.calculation__card ul li {
+  margin-bottom: 5px;
+}
+
+.formula {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #007BFF; /* Destaca a fórmula com uma cor azul suave */
+}
+
