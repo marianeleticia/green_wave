@@ -727,8 +727,14 @@ nav {
   font-size: 1.5em;
   font-weight: bold;
   margin: 15px 0;
-  color: #007BFF; /* Destaca a fórmula com uma cor azul suave */
+  color: #007BFF; 
 }
+
+.client__container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 
 /* Ajustes para telas menores */
 @media only screen and (max-width: 768px) {
@@ -739,7 +745,7 @@ nav {
   }
 
   .header__image img {
-    max-width: 100%; /* Garante que a imagem ocupe a largura total */
+    max-width: 100%; /
     height: auto;
   }
 
@@ -803,5 +809,36 @@ nav {
 
   .swiper-slide {
     width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .coeficientes__container .swiper-wrapper {
+    flex-direction: column;
+  }
+
+  .coeficientes__container .swiper-slide {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .coeficientes__container .menu__card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .coeficientes__container .menu__card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Ajustes para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+  .coeficientes__container .menu__card__details h4 {
+    font-size: 1.1em;
+  }
+
+  .coeficientes__container .menu__card__details p {
+    font-size: 0.9em;
   }
 }
